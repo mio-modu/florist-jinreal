@@ -100,13 +100,12 @@ function App() {
                 loading="lazy"
               />
             </div>
-            <div>
+            <div className="text-center">
               <h3 className="text-[2.5rem] font-bold mb-4 text-center">우리의 이야기</h3>
               <p className="text-[1.5rem] text-gray-600 mb-6 text-center leading-relaxed">
-                Florist Studio는 꽃을 통해 감성을 전달하고, 아름다움을 나누는 공간입니다.
-                우리는 각자의 개성과 스타일을 존중하며, 창의적인 플로리스트가 될 수 있도록 도와드립니다.
+                Florist Studio는 꽃을 통해 감성을 전달하고, 아름다움을 나누는 공간입니다. 우리는 각자의 개성과 스타일을 존중하며, 창의적인 플로리스트가 될 수 있도록 도와드립니다.
               </p>
-              <button className="bg-pink-600 text-white px-6 py-3 rounded-full text-[0.75rem] hover:bg-pink-700 transition-colors">
+              <button className="bg-pink-600 text-white px-8 py-4 rounded-full text-[1.5rem] hover:bg-pink-700 transition-colors">
                 더 알아보기
               </button>
             </div>
@@ -118,7 +117,7 @@ function App() {
           <p className="text-[1rem] text-gray-600 mb-8">
             궁금한 점이 있으시다면 언제든지 문의해 주세요.
           </p>
-          <button className="bg-pink-600 text-white px-8 py-4 rounded-full text-[0.75rem] hover:bg-pink-700 transition-colors">
+          <button className="bg-pink-600 text-white px-8 py-4 rounded-full text-[1.5rem] hover:bg-pink-700 transition-colors">
             문의하기
           </button>
         </section>
