@@ -38,7 +38,7 @@ function App() {
       {/* 헤더 섹션 */}
       <header className="fixed w-full bg-white/80 backdrop-blur-sm z-50 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
-          <div className="text-[2.5rem] font-bold text-pink-600 mb-4 md:mb-0">Florist Studio</div>
+          <div className="text-[2.5rem] font-bold text-pink-600 mb-4 md:mb-0 text-uppercase">FLORIST STUDIO</div>
           <nav className="flex flex-wrap justify-center gap-4 md:gap-8">
             <a href="#classes" className="text-[1rem] text-gray-600 hover:text-pink-600 transition-colors">클래스</a>
             <a href="#about" className="text-[1rem] text-gray-600 hover:text-pink-600 transition-colors">소개</a>
@@ -101,8 +101,8 @@ function App() {
               />
             </div>
             <div>
-              <h3 className="text-[1.25rem] font-bold mb-4">우리의 이야기</h3>
-              <p className="text-[0.75rem] text-gray-600 mb-6">
+              <h3 className="text-[2.5rem] font-bold mb-4 text-center">우리의 이야기</h3>
+              <p className="text-[1.5rem] text-gray-600 mb-6 text-center leading-relaxed">
                 Florist Studio는 꽃을 통해 감성을 전달하고, 아름다움을 나누는 공간입니다.
                 우리는 각자의 개성과 스타일을 존중하며, 창의적인 플로리스트가 될 수 있도록 도와드립니다.
               </p>
