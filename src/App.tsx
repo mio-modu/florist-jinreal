@@ -36,88 +36,100 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#ffe4e9] via-white to-[#fff0f3] text-gray-800 font-['Noto_Sans_KR']">
       {/* 헤더 섹션 */}
-      <header className="relative bg-gradient-to-r from-[#ffd6e0] to-[#ffecf1] p-4 md:p-8 shadow-lg">
-        <div className="max-w-7xl mx-auto flex flex-col items-center justify-center">
-          <h1 className="text-3xl md:text-[5rem] font-bold text-pink-700 mb-4">Florist Studio</h1>
-          <nav className="flex space-x-4 md:space-x-8">
-            <a href="#" className="text-base md:text-[2rem] text-pink-600 hover:text-pink-800 transition-colors">클래스</a>
-            <a href="#" className="text-base md:text-[2rem] text-pink-600 hover:text-pink-800 transition-colors">갤러리</a>
-            <a href="#" className="text-base md:text-[2rem] text-pink-600 hover:text-pink-800 transition-colors">문의하기</a>
+      <header className="fixed w-full bg-white/80 backdrop-blur-sm z-50 shadow-sm">
+        <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
+          <div className="text-[2.5rem] font-bold text-pink-600 mb-4 md:mb-0">Florist Studio</div>
+          <nav className="flex flex-wrap justify-center gap-4 md:gap-8">
+            <a href="#classes" className="text-[1rem] text-gray-600 hover:text-pink-600 transition-colors">클래스</a>
+            <a href="#about" className="text-[1rem] text-gray-600 hover:text-pink-600 transition-colors">소개</a>
+            <a href="#contact" className="text-[1rem] text-gray-600 hover:text-pink-600 transition-colors">문의</a>
           </nav>
         </div>
       </header>
 
       {/* 히어로 섹션 */}
-      <section className="relative h-[40vh] flex items-center justify-center overflow-hidden">
+      <section className="h-[40vh] relative flex items-center justify-center">
         <div className="absolute inset-0">
-          <img 
+          <img
             src={IMAGES.hero}
-            alt="Floral background" 
+            alt="Hero"
             className="w-full h-full object-cover"
-            loading="eager"
+            loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-pink-900/50 to-pink-600/30"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
         </div>
-        <div className="relative z-10 text-center text-white px-4">
-          <h2 className="text-4xl md:text-[5rem] lg:text-[6.67rem] font-bold mb-6 drop-shadow-lg">감성을 전하는 꽃</h2>
-          <p className="text-2xl md:text-6xl lg:text-8xl mb-8 font-light">당신만의 특별한 순간을 더욱 특별하게</p>
-          <button className="px-8 md:px-16 py-4 md:py-6 bg-white text-pink-600 rounded-full hover:bg-pink-50 transition-colors duration-300 shadow-lg hover:shadow-xl text-xl md:text-5xl">
-            클래스 둘러보기
-          </button>
+        <div className="relative z-10 text-center text-white">
+          <h1 className="text-[7.5rem] md:text-[10rem] font-bold mb-4">꽃으로 말하다</h1>
+          <p className="text-[2.5rem] md:text-[3.33rem]">감성을 전하는 꽃</p>
         </div>
       </section>
 
-      <main className="max-w-7xl mx-auto px-4 py-8 md:py-16">
-        {/* 소개 섹션 */}
-        <section className="text-center mb-12 md:mb-20">
-          <h2 className="text-3xl md:text-[5rem] font-bold text-pink-700 mb-6">🌸 클래스 안내</h2>
-          <p className="text-lg md:text-[2rem] text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            1:1 플라워 클래스부터 원데이 클래스, 웨딩 부케까지<br/>
-            당신만의 특별한 순간을 만들어보세요
+      <main className="container mx-auto px-4 py-16">
+        <section id="classes" className="mb-20">
+          <h2 className="text-[2.5rem] font-bold text-center mb-12">클래스 안내</h2>
+          <p className="text-[1rem] text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+            꽃과 함께하는 특별한 시간을 만들어보세요. 전문 플로리스트와 함께하는 다양한 클래스를 준비했습니다.
           </p>
-        </section>
-
-        {/* 클래스 카드 섹션 */}
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-12 md:mb-20">
-          <ClassCard 
-            image={IMAGES.bouquet}
-            title="부케 클래스"
-            description="감각적인 웨딩 부케 만들기"
-          />
-          <ClassCard 
-            image={IMAGES.table}
-            title="테이블 플라워"
-            description="홈카페 분위기의 테이블 연출"
-          />
-          <ClassCard 
-            image={IMAGES.wrapping}
-            title="꽃다발 포장"
-            description="감성 가득한 꽃다발 만들기"
-          />
-        </section>
-
-        {/* CTA 섹션 */}
-        <section className="bg-gradient-to-r from-pink-100 to-pink-200 rounded-3xl p-6 md:p-12 shadow-xl">
-          <div className="text-center">
-            <h2 className="text-3xl md:text-[5rem] font-bold text-pink-700 mb-6">✨ 특별한 경험을 선물하세요</h2>
-            <p className="text-lg md:text-[2rem] text-gray-700 mb-8">당신만의 특별한 순간을 더욱 특별하게 만들어드립니다</p>
-            <button className="px-8 md:px-16 py-4 md:py-6 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition-colors duration-300 shadow-lg hover:shadow-xl text-xl md:text-[2rem]">
-              문의하기
-            </button>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <ClassCard 
+              image={IMAGES.bouquet}
+              title="부케 클래스"
+              description="감각적인 웨딩 부케 만들기"
+            />
+            <ClassCard 
+              image={IMAGES.table}
+              title="테이블 플라워"
+              description="홈카페 분위기의 테이블 연출"
+            />
+            <ClassCard 
+              image={IMAGES.wrapping}
+              title="꽃다발 포장"
+              description="감성 가득한 꽃다발 만들기"
+            />
           </div>
+        </section>
+
+        <section id="about" className="mb-20">
+          <h2 className="text-[2.5rem] font-bold text-center mb-12">About Us</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <img
+                src={IMAGES.hero}
+                alt="About Us"
+                className="w-full h-[40vh] object-cover rounded-lg shadow-lg"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <h3 className="text-[1.25rem] font-bold mb-4">우리의 이야기</h3>
+              <p className="text-[0.75rem] text-gray-600 mb-6">
+                Florist Studio는 꽃을 통해 감성을 전달하고, 아름다움을 나누는 공간입니다.
+                우리는 각자의 개성과 스타일을 존중하며, 창의적인 플로리스트가 될 수 있도록 도와드립니다.
+              </p>
+              <button className="bg-pink-600 text-white px-6 py-3 rounded-full text-[0.75rem] hover:bg-pink-700 transition-colors">
+                더 알아보기
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" className="text-center">
+          <h2 className="text-[2.5rem] font-bold mb-8">문의하기</h2>
+          <p className="text-[1rem] text-gray-600 mb-8">
+            궁금한 점이 있으시다면 언제든지 문의해 주세요.
+          </p>
+          <button className="bg-pink-600 text-white px-8 py-4 rounded-full text-[0.75rem] hover:bg-pink-700 transition-colors">
+            문의하기
+          </button>
         </section>
       </main>
 
-      <footer className="bg-gradient-to-r from-pink-50 to-pink-100 mt-12 md:mt-20 py-8 md:py-12">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <div className="mb-6 md:mb-8">
-            <h3 className="text-2xl md:text-[3rem] font-bold text-pink-700 mb-4">Florist Studio</h3>
-            <p className="text-base md:text-[1.5rem] text-gray-600">꽃으로 전하는 특별한 마음</p>
-          </div>
-          <div className="text-sm md:text-[1.2rem] text-gray-500">
-            <p className="mb-2">ⓒ 2025 Florist Studio. All rights reserved.</p>
-            <p>서울특별시 강남구 테헤란로 123</p>
-          </div>
+      <footer className="bg-gray-100 py-12">
+        <div className="container mx-auto px-4 text-center">
+          <h3 className="text-[1.5rem] font-bold text-gray-800 mb-4">Florist Studio</h3>
+          <p className="text-[0.75rem] text-gray-600">
+            © 2025 Florist Studio. All rights reserved.
+          </p>
         </div>
       </footer>
     </div>
