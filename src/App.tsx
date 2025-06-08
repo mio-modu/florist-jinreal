@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import { memo } from "react";
 
 // 이미지 URL 상수
 const IMAGES = {
