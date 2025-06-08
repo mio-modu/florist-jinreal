@@ -59,7 +59,7 @@ function App() {
           <div className="absolute inset-0 bg-black/30"></div>
         </div>
         <div className="relative z-10 text-center text-white">
-          <h1 className="text-[7.5rem] md:text-[10rem] font-bold mb-4">꽃으로 말하다</h1>
+          <h1 className="text-[3.75rem] md:text-[5rem] font-bold mb-4">꽃으로 말하다</h1>
           <p className="text-[2.5rem] md:text-[3.33rem]">감성을 전하는 꽃</p>
         </div>
       </section>
